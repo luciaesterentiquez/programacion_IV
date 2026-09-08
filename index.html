@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permite que el sitio se adapte correctamente a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sex and the City | Home</title>
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 
+        HEADER
+        Estructura con Flexbox:
+        - Navegación a la izquierda
+        - Logo a la derecha
+    -->
+    <header class="site-header">
+
+    <!-- Logo ahora a la izquierda -->
+    <div class="site-header__logo">
+        <a href="index.html">
+            <img src="img/logo4.png" alt="Logo de Sex and the City">
+        </a>
+    </div>
+
+    <!-- Navegación ahora a la derecha -->
+    <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+
+            <!-- Menú desplegable de temporadas -->
+            <li class="nav-dropdown">
+                <a href="#" class="nav-dropdown__link">Temporadas</a>
+
+                <ul class="nav-dropdown__menu">
+                    <li><a href="temporada1.html">Temporada 1</a></li>
+                    <li><a href="temporada2.html">Temporada 2</a></li>
+                    <li><a href="temporada3.html">Temporada 3</a></li>
+                    <li><a href="temporada4.html">Temporada 4</a></li>
+                    <li><a href="temporada5.html">Temporada 5</a></li>
+                    <li><a href="temporada6.html">Temporada 6</a></li>
+                </ul>
+            </li>
+
+                <li>
+                    <a href="#">Personajes</a>
+                </li>
+
+            <!-- Nueva división Galería -->
+                <li>
+                    <a href="#galeria">Galería</a>
+                </li>
+
+             <!-- Nueva división Contacto -->
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <section class="home-section" aria-labelledby="home-title">
+
+            <!-- 
+                ARTÍCULO DE SINOPSIS
+                Layout en 2 columnas 50% / 50%
+            -->
+            <article class="synopsis-card">
+
+                <!-- Columna izquierda: imagen principal -->
+                <div class="synopsis-card__image">
+                    <img src="img/principal.jpg" alt="Protagonistas de Sex and the City">
+                </div>
+
+                <!-- Columna derecha: texto -->
+                <div class="synopsis-card__content">
+                    <span class="eyebrow">New York · Amor · Moda · Amistad</span>
+
+                    <h1 id="home-title">Sex and the City</h1>
+
+                    <p>
+                        <strong>Sex and the City</strong> sigue la vida de cuatro amigas en Nueva York:
+                        Carrie Bradshaw, Samantha Jones, Charlotte York y Miranda Hobbes. Entre romances,
+                        desilusiones, moda, independencia y conversaciones inolvidables, la serie retrata
+                        con estilo y humor la búsqueda del amor, la identidad y la libertad personal.
+                    </p>
+
+                    <p>
+                        Con una estética sofisticada, urbana y provocadora, se convirtió en un ícono de la
+                        cultura pop y en una referencia visual de elegancia, glamour y actitud.
+                    </p>
+
+                    <a href="#" class="cta-link">Explorar la serie</a>
+                </div>
+            </article>
+
+            <!-- 
+                CARRUSEL
+                No tiene botones visibles.
+                La rotación se activa únicamente al pasar el mouse por encima.
+            -->
+            <div class="carousel-section" id="galeria">
+                <div class="section-heading">
+                    
+                    <h2>Momentos icónicos</h2>
+                    
+                </div>
+
+                <div class="carousel" id="hoverCarousel" aria-label="Carrusel de imágenes de Sex and the City">
+                    <div class="carousel__track">
+
+                        <!-- 
+                            Imágenes provenientes de:
+                            img/carrucel/
+                            Podés cambiar los nombres según tus archivos reales.
+                        -->
+                        <img src="img/carrucel/carrucel.jpg" class="carousel__image active" alt="Imagen de galería 1">
+                        <img src="img/carrucel/carrucel1.jpg" class="carousel__image" alt="Imagen de galería 2">
+                        <img src="img/carrucel/carrucel2.jpg" class="carousel__image" alt="Imagen de galería 3">
+                        <img src="img/carrucel/carrucel3.jpg" class="carousel__image" alt="Imagen de galería 4">
+                        <img src="img/carrucel/carrucel4.jpg" class="carousel__image" alt="Imagen de galería 5">
+                        <img src="img/carrucel/carrucel5.jpg" class="carousel__image" alt="Imagen de galería 6">
+                    </div>
+
+                    <!-- Elementos decorativos estilo pop-art -->
+                    <div class="carousel__badge">Hover</div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contacto">
+
+        <div class="site-footer__legal">
+            <p>&copy; 2025 Sitio fan dedicado a <strong>Sex and the City</strong>.</p>
+            <p>Diseño y desarrollo por <strong>Lucia Enriquez</strong>. Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Redes sociales estilizadas en rosa -->
+        <div class="site-footer__social" aria-label="Redes sociales">
+            <a href="#" aria-label="X" class="social-icon">𝕏</a>
+            <a href="#" aria-label="Facebook" class="social-icon">f</a>
+            <a href="#" aria-label="Instagram" class="social-icon">◎</a>
+            <a href="#" aria-label="WhatsApp" class="social-icon">☏</a>
+        </div>
+
+    </footer>
+
+    <!-- Script externo -->
+    <script src="js/main.js"></script>
+</body>
+</html>
