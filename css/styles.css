@@ -87,7 +87,7 @@ body::before {
 .site-header {
     width: 100%;
     margin: 0;
-    padding: 14px 40px;
+    padding: 6px 32px; /* Menos espacio arriba y abajo */
 
     display: flex;
     justify-content: space-between;
@@ -96,11 +96,9 @@ body::before {
 
     background: rgba(5, 5, 5, 0.94);
     border-bottom: var(--border-heavy);
-
     box-shadow:
         0 7px 0 var(--color-pink),
         0 0 35px rgba(255, 20, 147, 0.25);
-
     position: relative;
     z-index: 50;
 }
@@ -121,18 +119,29 @@ body::before {
 }
 
 /* Logo */
+/* Logo */
 .site-header__logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden; /* Corta bordes sobrantes */
+}
+
+.site-header__logo a {
     display: inline-block;
-    background: transparent;
-    padding: 6px 10px;
+    line-height: 0;
+    text-decoration: none;
 }
 
 .site-header__logo img {
     display: block;
-    max-width: clamp(110px, 13vw, 180px);
-    height: auto;
+    height: clamp(32px, 4.5vw, 48px);
+    width: auto;
+    max-width: 100%;
 
-    /* Esto convierte todo el logo al color dorado */
+    /* Recorta 2px en cada borde para descartar líneas fantasmas del PNG */
+    clip-path: inset(2px 2px 2px 2px);
+
     filter:
         brightness(0)
         saturate(100%)
